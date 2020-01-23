@@ -47,8 +47,13 @@ public class Bank {
         return null;
     }
 
-    // public boolean listCustomers(String branchName, boolean showTransactions) {
-        // Branch 
-    // }
+    public boolean listCustomers(String branchName, boolean showTransactions) {
+        Branch branch = findBranch(branchName);
+        if (branch != null) {
+            System.out.println("Customer details for branch " + branch.getName());
+
+        }
+        return false;
+    }
 
 }
