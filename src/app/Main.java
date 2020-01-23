@@ -20,6 +20,19 @@ public class Main {
         System.out.println();
         bank.listCustomers("Utopia", true);
 
+        bank.listCustomers("Atlantis", true);
+
+        if (!bank.addCustomer("Lyonesse", "Atlas", 3.45)) {
+            System.out.println("Error Lyonesse branch does not exist");
+        }
+
+        bank.addBranch("Lyonesse");
+        if (!bank.addCustomer("Lyonesse", "Atlas", 3.45)) {
+            System.out.println("Error Lyonesse branch does not exist");
+        }
+        System.out.println();
+        bank.listCustomers("Lyonesse", true);
+
         
     }
 }
