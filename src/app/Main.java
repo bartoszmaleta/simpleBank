@@ -17,6 +17,9 @@ public class Main {
         // bank.addCustomerTransaction("Utopia", "Bartosz", 45.78);
 
         bank.listCustomers("Utopia", false);
+        System.out.println();
+        bank.listCustomers("Utopia", true);
 
+        
     }
 }
