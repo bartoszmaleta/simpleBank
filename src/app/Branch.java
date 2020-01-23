@@ -35,15 +35,16 @@ public class Branch {
 
     private Customer findCustomer(String customerName) {
         for (int i = 0; i < this.customers.size(); i++) {
-            if (this.customers.get(i).getName().equals(customerName)) {
-                return this.customers.get(i);
-            }
+            // FIRST OPTION
+            // if (this.customers.get(i).getName().equals(customerName)) {
+            //     return this.customers.get(i);
+            // }
 
             // or     (more efficient)
-            // Customer checkedCustomer = this.customers.get(i);
-            // if (checkedCustomer.getName().equals(customerName)) {
-                // return checkedCustomer;
-            // }
+            Customer checkedCustomer = this.customers.get(i);
+            if (checkedCustomer.getName().equals(customerName)) {
+                return checkedCustomer;
+            }
         }
         return null;
     }
